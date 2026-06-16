@@ -1,0 +1,72 @@
+:root {
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Ubuntu", sans-serif;
+
+  --dark: #4c5866;
+  --light-grey: #d1d1e5;
+  --color1: #4946b4;
+  --color2: #7875fe;
+  --color3: #dad9fb;
+  --color-logo: #333333;
+  --color-logo--white: #ffffff;
+
+  --border: 1px solid #7875fe;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--dark);
+  transition: color .4s ease-in-out, background-color .4s ease-in-out;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  color: var(--dark);
+  background-color: var(--color3)   ;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: color .4s ease-in-out, background-color .4s ease-in-out;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+ .btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2px;
+  opacity: 0;
+  background-color: var(--color3);
+  opacity: 0;
+ }
+
+ .btn:focus-visible::after {
+  opacity: 1;
+ }
