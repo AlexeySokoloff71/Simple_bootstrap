@@ -6,6 +6,7 @@
   <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
@@ -13,10 +14,318 @@
   <title>Simple</title>
 </head>
 <body>
-  <div data-include="header.html"></div>
-  
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="header__container">
+        
+          <div class="logo__container">
+            <div class="logo">
+              <div class="circle"></div>
+              simple
+              <div class="ovale"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <button class=" btn burger burger" id="burgerBtn" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+
+            <nav class="menu header__nav" id="mobileMenu">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="link menu__link" href="#product">Продукция</a></li>
+                <li class="menu__item"><a class="link menu__link" href="#material">Материалы</a></li>
+                <li class="menu__item"><a class="link menu__link" href="#about">О нас</a></li>
+                <li class="menu__item"><a class="link menu__link" href="#contact">Контакты</a></li>
+              </ul>
+            </nav>
+
+          <div class="btn__wrapper">
+
+            <div class="search__wrapper">
+
+              <button class="btn header__btn search-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 19C8.58172 19 5 15.4183 5 11C5 6.58172 8.58172 3 13 3C17.4183 3 21 6.58172 21 11C21 15.4183 17.4183 19 13 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M3.0001 21L7.3501 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+
+              <form action="#" method="post" class="search-form">
+                <input id="search-form" name="search-form" type="search" class="search-form__input" placeholder="Найти">
+                <button class="btn header__btn search-form__close" type="button" aria-label="Закрыть форму поиска">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="8" cy="8" r="8"/>
+                    <path d="M5.99961 10.35L10.3496 6" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10.35 10.35L6 6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+            <button class="btn header__btn login-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 17L15 12L10 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15 12H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-7 col-sm-7 col-xs-12 d-flex align-items-center">
+            <div class="hero__content">
+              <h1 class="visually-hidden">Сайт о бумаге</h1>
+              <p class="hero__title mb-4">Простые вещи.<br>
+                Из&nbsp;бумаги</p>
+              <p class="hero__descr mb-4">Бума&#769;га (предположительно от&nbsp;итал. bombagia, первоисточником&nbsp;же считается иранский)&nbsp;&mdash; волокнистый материал с&nbsp;минеральными добавками.</p>
+              <a href="#" class="btn__secondary">Купить</a>
+            </div>
+          </div>
+
+          <div class="hero-image col-lg-6 col-md-5 col-sm-5 d-flex justify-content-end align-items-end">
+            <picture>
+              <source 
+              srcset="image/hero-mobile.png 2x"
+              media="(max-width: 768px)">
+              <source 
+              srcset="image/hero-mobile.png"
+              media="(max-width: 768px)">
+              <source 
+              srcset="image/hero-tablet.png 2x"
+              media="(max-width: 992px)">
+              <source 
+              srcset="image/hero-tablet.png"
+              media="(max-width: 992px)">
+              <source 
+              srcset="image/hero.png 2x"
+              media="(min-width: 992px)">
+              <img class="hero__img" src="image/hero.png" aria-hidden="true">
+            </picture>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="result">
+      <h2 class="visually-hidden">Наши результаты</h2>
+      <div class="container result__container">
+        <div class="row">
+
+          <div class="col-sm-4 col-xs-12">
+            <article class="result__item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 col-sm-12 col-xs-6 mb-1">
+                    <picture>
+                      <source srcset="image/result1-2x.png 2x">
+                      <img class="result__item-img" src="image/result1.png" alt="Пример результата обучения">
+                    </picture>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-xs-6">
+                    <h2 class="result__item-title">V.1</h2>
+                    <p class="result__item-descr">Результат вашего обучения</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-4 col-xs-12">
+            <article class="result__item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 col-sm-12 col-xs-6 mb-1">
+                    <picture>
+                      <source srcset="image/result2-2x.png 2x">
+                      <img class="result__item-img" src="image/result2.png" alt="Пример результата обучения">
+                    </picture>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-xs-6">
+                    <h2 class="result__item-title">V.2</h2>
+                    <p class="result__item-descr">Результат вашего обучения</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-4 col-xs-12">
+            <article class="result__item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 col-sm-12 col-xs-6 mb-1">
+                    <picture>
+                      <source srcset="image/result3-2x.png 2x">
+                      <img class="result__item-img" src="image/result3.png" alt="Пример результата обучения">
+                    </picture>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-xs-6">
+                    <h2 class="result__item-title">V.3</h2>
+                    <p class="result__item-descr">Результат вашего обучения</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-6 col-sm-12">
+            <picture>
+              <source
+              srcset="image/result-preview-2x.png 2x">
+              <img class="result__img" src="image/result-preview.png" aria-hidden="true">
+            </picture>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-self-center">
+            <h2 class="result__title">Максимальная белизна</h2>
+              <p class="result__descr">Для повышения белизны, гладкости и мягкости в состав бумажной массы вводят белые минеральные вещества: мел, тальк, каолин и др. Эта операция называется наполнением.</p>
+              <p class="result__descr">Отлив бумажного листа осуществляют на бумагоделательной машине, важнейшей частью которой является непрерывно движущаяся (как транспортер) металлическая или капроновая сетка.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="product" id="product">
+      <h2 class="visually-hidden">Наши продукты</h2>
+      <div class="container">
+        <div class="row card__container">
+
+          <div class="col-lg-3 col-sm-6">
+            <article class="product-card">
+              <picture>
+                <source srcset="image/wrapper-2x.png 2x">
+                <img class="product-card__img img-fluid mb-2" src="image/wrapper.png" alt="Фото упаковки">
+              </picture>
+              <h2 class="product-card__title">Упаковка</h2>
+              <span class="product-card__circulation">Тираж: от&nbsp;50&nbsp;штук</span>
+              <p class="product-card__descr mb-2">Сделано из&nbsp;крафт-бумаги или плотного картона. Упаковки имеют различные формы и&nbsp;расцветки, изготовим форму под заказ.</p>
+              <a href="#" class="link product-card__link">Подробнее
+                <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.7071 8.07107C21.0976 7.68054 21.0976 7.04738 20.7071 6.65685L14.3431 0.292892C13.9526 -0.0976319 13.3195 -0.0976319 12.9289 0.292892C12.5384 0.683417 12.5384 1.31658 12.9289 1.70711L18.5858 7.36396L12.9289 13.0208C12.5384 13.4113 12.5384 14.0445 12.9289 14.435C13.3195 14.8256 13.9526 14.8256 14.3431 14.435L20.7071 8.07107ZM0 8.36396H20V6.36396H0V8.36396Z" />
+                </svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <article class="product-card">
+              <picture>
+                <source srcset="image/package-2x.png 2x">
+                <img class="product-card__img img-fluid mb-2" src="image/package.png" alt="Фото пакетов">
+              </picture>
+              <h2 class="product-card__title">Пакеты</h2>
+              <span class="product-card__circulation">Тираж: от&nbsp;200&nbsp;штук</span>
+              <p class="product-card__descr mb-2">С&nbsp;прямоугольным дном. От&nbsp;10&nbsp;см до&nbsp;60&nbsp;см по&nbsp;высоте. Материалы: картон, крафт-бумага. Различные расцветки и&nbsp;дизайн.</p>
+              <a href="#" class="link product-card__link">Подробнее
+                <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.7071 8.07107C21.0976 7.68054 21.0976 7.04738 20.7071 6.65685L14.3431 0.292892C13.9526 -0.0976319 13.3195 -0.0976319 12.9289 0.292892C12.5384 0.683417 12.5384 1.31658 12.9289 1.70711L18.5858 7.36396L12.9289 13.0208C12.5384 13.4113 12.5384 14.0445 12.9289 14.435C13.3195 14.8256 13.9526 14.8256 14.3431 14.435L20.7071 8.07107ZM0 8.36396H20V6.36396H0V8.36396Z" />
+                </svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <article class="product-card">
+              <picture>
+                <source srcset="image/cases-2x.png 2x">
+                <img class="product-card__img img-fluid mb-2" src="image/cases.png" alt="Фото кейсов">
+              </picture>
+              <h2 class="product-card__title">Кейсы</h2>
+              <span class="product-card__circulation">Тираж: от&nbsp;30&nbsp;штук</span>
+              <p class="product-card__descr mb-2">Подойдет для документов и&nbsp;других бумаг. Различные расцветки, размеры и&nbsp;плотность. Материал: прессованная бумага.</p>
+              <a href="#" class="link product-card__link">Подробнее
+                <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.7071 8.07107C21.0976 7.68054 21.0976 7.04738 20.7071 6.65685L14.3431 0.292892C13.9526 -0.0976319 13.3195 -0.0976319 12.9289 0.292892C12.5384 0.683417 12.5384 1.31658 12.9289 1.70711L18.5858 7.36396L12.9289 13.0208C12.5384 13.4113 12.5384 14.0445 12.9289 14.435C13.3195 14.8256 13.9526 14.8256 14.3431 14.435L20.7071 8.07107ZM0 8.36396H20V6.36396H0V8.36396Z" />
+                </svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <article class="product-card">
+              <picture>
+                <source srcset="image/other-products.png, image/other-products-2x.png 2x">
+                <img class="product-card__img img-fluid mb-2" src="image/other-products.png" alt="Фото других изделий">
+              </picture>
+              <h2 class="product-card__title">Другие&nbsp;изделия</h2>
+              <span class="product-card__circulation">Тираж: от&nbsp;100&nbsp;штук</span>
+              <p class="product-card__descr mb-2">Нестандартные упаковки, кейсы и&nbsp;другие изделия различных размеров и&nbsp;конфигураций. Изготовим в&nbsp;кратчайшие сроки.</p>
+              <a href="#" class="link product-card__link">Подробнее
+                <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.7071 8.07107C21.0976 7.68054 21.0976 7.04738 20.7071 6.65685L14.3431 0.292892C13.9526 -0.0976319 13.3195 -0.0976319 12.9289 0.292892C12.5384 0.683417 12.5384 1.31658 12.9289 1.70711L18.5858 7.36396L12.9289 13.0208C12.5384 13.4113 12.5384 14.0445 12.9289 14.435C13.3195 14.8256 13.9526 14.8256 14.3431 14.435L20.7071 8.07107ZM0 8.36396H20V6.36396H0V8.36396Z" />
+                </svg>
+              </a>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="partners">
+      <h2 class="visually-hidden">Наши партнёры</h2>
+      <div class="content">
+
+        <div class="container swiper slider">
+        <div class="row partners__container swiper-wrapper">
+          
+          <div class="swiper-slide col-md-3 col-sm-6">
+            <a href="#" class="partners__link">
+              <img src="icons/Hahnemuhle.svg" class="img-fluid" alt="Лого Hahnemuhle">
+            </a>
+          </div>
+
+          <div class="swiper-slide col-md-3 col-sm-6">
+            <a href="#" class="partners__link">
+              <img src="icons/canson.svg" class="img-fluid" alt="Лого canson">
+            </a>
+          </div>
+
+          <div class="swiper-slide col-md-3 col-sm-6">
+            <a href="#" class="partners__link">
+              <img src="icons/royal-talens.svg" class="img-fluid" alt="Лого royal-talens">
+            </a>
+          </div>
+
+          <div class="swiper-slide col-md-3 col-sm-6">
+            <a href="#" class="partners__link">
+              <img src="icons/fabriano.svg" class="img-fluid" alt="Лого fabriano">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="https://unpkg.com/html-data-include@3.3.3/html-data-include.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -4,15 +4,26 @@
 
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
+const links = document.querySelectorAll('.menu__link');
 
-burger.addEventListener('click', toggleMenu);
+ //Тап по бургеру
+if (burger) {
+  burger.addEventListener('click', toggleMenu);
+};
 
+//Переход по ссылке
+links.forEach( link => {
+  link.addEventListener('click', toggleMenu);
+});
+
+//Нажатие Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && menu.classList.contains('menu--active')) {
     toggleMenu();
   }
 });
 
+//Функция открытия/закрытия меню
 function toggleMenu() {
   const isOpen = menu.classList.toggle('open');
 
@@ -39,7 +50,7 @@ searchClose.addEventListener('click', closeSearch);
 
 function openSearch() {
   searchForm.classList.add('search-form--active');
-  // searchForm.classList.add('search-form--visible');
+
   setTimeout(() => {
     searchForm.classList.add('search-form--visible');
   },  0);
@@ -47,7 +58,7 @@ function openSearch() {
 
 function closeSearch() {
   searchForm.classList.remove('search-form--visible');
-  // searchForm.classList.remove('search-form--visible');
+  
   setTimeout(() => {
     searchForm.classList.remove('search-form--active');
   }, 300);
@@ -57,4 +68,56 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && searchForm.classList.contains('search-form--active')) {
     closeSearch();
   }
+});
+
+//Swiper-on-resize by maxdenaro
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+    let swiper;
+
+    breakpoint = window.matchMedia(breakpoint);
+
+    const enableSwiper = function(className, settings) {
+      swiper = new Swiper(className, settings);
+
+      if (callback) {
+        callback(swiper);
+      }
+    }
+
+    const checker = function() {
+      if (breakpoint.matches) {
+        return enableSwiper(swiperClass, swiperSettings);
+      } else {
+        if (swiper !== undefined) swiper.destroy(true, true);
+        return;
+      }
+    };
+
+    breakpoint.addEventListener('change', checker);
+    checker();
+  }
+
+  resizableSwiper(
+    '(max-width: 576px)',
+    '.slider',
+    {
+      direction: 'horizontal',
+      loop: true,
+      initialSlide: 0,
+      autoplay: { 
+        delay: 1500, 
+        disableOnInteraction: true,
+      },
+      spaceBetween: 10,
+      slidesPerView: 2,          // сколько слайдов показывать
+      slidesPerGroup: 1,         // сколько пролистывать за раз
+      centeredSlides: false,
+
+      speed: 300,
+      freeMode: true,
+    }
+  );
 });
