@@ -82,6 +82,14 @@
   .btn__wrapper {
     height: 44px;
   }
+  .result,
+  .product,
+  .partners {
+    padding-block: 60px;
+  }
+  .sketchbook {
+    padding-top: 60px;
+  }
   .hero__title {
     font-size: 50px;
   }
@@ -99,6 +107,12 @@
   }
   .partners__link {
     height: 80px;
+  }
+  .sketchbook__content {
+    margin-bottom: 60px;
+  }
+  .sketchbook__title {
+    font-size: 30px;
   }
 }
 
@@ -135,7 +149,19 @@
   }
   .swiper-slide {
   width: 50%;
-}
+  }
+  .sketchbook__title {
+    font-size: 24px;
+  }
+  .sketchbook__descr {
+    font-size: 16px;
+  }
+  .sketchbook__content {
+    order: 1;
+  }
+  .sketchbook__image {
+    height: 400px;
+  }
 }
 
 @media screen and (width < 576px) {
@@ -230,5 +256,13 @@
   }
   .partners__link {
     height: 80px;
+  }
+  .footer__container {
+    flex-direction: column;
+  }
+  .logo__container-bottom {
+    padding: 20px 0;
+    height: 62px;
+    border-bottom: 1px solid #dddddd20;
   }
 } 

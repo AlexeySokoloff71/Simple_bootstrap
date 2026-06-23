@@ -2,14 +2,12 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Simple. Производство и продажа бумаги и бумажных изделий на всей территории РФ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/media.css">
   <title>Simple</title>
 </head>
@@ -49,7 +47,7 @@
 
             <div class="search__wrapper">
 
-              <button class="btn header__btn search-btn">
+              <button class="btn header__btn search-btn" aria-label="Открыть поиск">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13 19C8.58172 19 5 15.4183 5 11C5 6.58172 8.58172 3 13 3C17.4183 3 21 6.58172 21 11C21 15.4183 17.4183 19 13 19Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M3.0001 21L7.3501 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -68,7 +66,7 @@
               </form>
             </div>
 
-            <button class="btn header__btn login-btn">
+            <button class="btn header__btn login-btn" aria-label="Войти или зарегистрироваться">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M10 17L15 12L10 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -113,9 +111,9 @@
               srcset="image/hero-tablet.png"
               media="(max-width: 992px)">
               <source 
-              srcset="image/hero.png 2x"
+              srcset="image/hero.webp 2x"
               media="(min-width: 992px)">
-              <img class="hero__img" src="image/hero.png" aria-hidden="true">
+              <img class="hero__img" src="image/hero.webp" aria-hidden="true">
             </picture>
           </div>
 
@@ -193,8 +191,8 @@
           <div class="col-lg-8 col-md-6 col-sm-12">
             <picture>
               <source
-              srcset="image/result-preview-2x.png 2x">
-              <img class="result__img" src="image/result-preview.png" aria-hidden="true">
+              srcset="image/result-preview.webp 2x">
+              <img class="result__img" src="image/result-preview.webp" aria-hidden="true">
             </picture>
           </div>
 
@@ -322,10 +320,78 @@
       </div>
     </section>
 
+    <section class="sketchbook">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 sketchbook__content">
+            <h2 class="sketchbook__title mb-4">Simple скетчбук</h2>
+            <p class="sketchbook__descr mb-4">80&nbsp;листов, твердая обложка, бумага Fabriano 200&nbsp;г/м2. Подойдет и&nbsp;для графики и&nbsp;для акварели. Для самых смелых творческих замыслов!</p>
+            <a href="#" class="btn__secondary">Купить</a>
+          </div>
+
+          <div class="col-lg-8 col-md-6 col-sm-12 sketchbook__image">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container footer__container">
+
+          <div class="logo__container logo__container-bottom">
+            <div class="logo logo--white">
+              <div class="circle"></div>
+              simple
+              <div class="ovale"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use href="social.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use href="social.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use href="social.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use href="social.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        Simple <span class="reg">&reg;</span> 2026
+      </div>
+    </footer>
+
   </main>
 
+  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

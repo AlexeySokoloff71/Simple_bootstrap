@@ -108,15 +108,15 @@ window.addEventListener('DOMContentLoaded', () => {
       loop: true,
       initialSlide: 0,
       autoplay: { 
-        delay: 1500, 
+        delay: 0, 
         disableOnInteraction: true,
       },
       spaceBetween: 10,
-      slidesPerView: 2,          // сколько слайдов показывать
-      slidesPerGroup: 1,         // сколько пролистывать за раз
+      slidesPerView: 2,
+      slidesPerGroup: 1,
       centeredSlides: false,
 
-      speed: 300,
+      speed: 3500,
       freeMode: true,
     }
   );
