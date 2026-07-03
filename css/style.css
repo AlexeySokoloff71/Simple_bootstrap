@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: url('../fonts/Ubuntu-Light.woff2');
+  src: url('/fonts/Ubuntu-Light.woff2');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-VariableFont_wdth\,wght.woff2');
+  src: url('../fonts/Roboto-VariableFont_wdth,wght.woff2');
   font-style: normal;
 }
 
@@ -40,10 +40,13 @@
   font-size: 1rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 1440px;
   margin: 0 auto;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 

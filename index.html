@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="RU">
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Simple. Производство и продажа бумаги и бумажных изделий на всей территории РФ">
@@ -37,9 +37,9 @@
             <nav class="menu header__nav" id="mobileMenu">
               <ul class="menu__list">
                 <li class="menu__item"><a class="link menu__link" href="#product">Продукция</a></li>
-                <li class="menu__item"><a class="link menu__link" href="#material">Материалы</a></li>
-                <li class="menu__item"><a class="link menu__link" href="#about">О нас</a></li>
-                <li class="menu__item"><a class="link menu__link" href="#contact">Контакты</a></li>
+                <li class="menu__item"><a class="link menu__link" href="#">Материалы</a></li>
+                <li class="menu__item"><a class="link menu__link" href="#">О нас</a></li>
+                <li class="menu__item"><a class="link menu__link" href="#">Контакты</a></li>
               </ul>
             </nav>
 
@@ -113,7 +113,7 @@
               <source 
               srcset="image/hero.webp 2x"
               media="(min-width: 992px)">
-              <img class="hero__img" src="image/hero.webp" aria-hidden="true">
+              <img class="hero__img" src="image/hero.webp" fetchpriority="high" aria-hidden="true">
             </picture>
           </div>
 
@@ -192,7 +192,7 @@
             <picture>
               <source
               srcset="image/result-preview.webp 2x">
-              <img class="result__img" src="image/result-preview.webp" aria-hidden="true">
+              <img class="result__img" src="image/result-preview.webp" loading="lazy" aria-hidden="true">
             </picture>
           </div>
 
@@ -351,30 +351,30 @@
 
           <ul class="social">
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a href="#" class="social__link" aria-label="facebook">
                 <svg class="social__icon">
-                  <use href="social.svg#facebook"></use>
+                  <use href="sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a href="#" class="social__link" aria-label="twitter">
                 <svg class="social__icon">
-                  <use href="social.svg#twitter"></use>
+                  <use href="sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a href="#" class="social__link" aria-label="instagram">
                 <svg class="social__icon">
-                  <use href="social.svg#instagram"></use>
+                  <use href="sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link">
+              <a href="#" class="social__link" aria-label="youtube">
                 <svg class="social__icon">
-                  <use href="social.svg#youtube"></use>
+                  <use href="sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>

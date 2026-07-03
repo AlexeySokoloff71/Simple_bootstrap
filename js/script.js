@@ -6,36 +6,25 @@ const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const links = document.querySelectorAll('.menu__link');
 
- //Тап по бургеру
 if (burger) {
   burger.addEventListener('click', toggleMenu);
 };
 
-//Переход по ссылке
 links.forEach( link => {
   link.addEventListener('click', toggleMenu);
 });
 
-//Нажатие Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && menu.classList.contains('menu--active')) {
     toggleMenu();
   }
 });
 
-//Функция открытия/закрытия меню
+//function open/close menu
 function toggleMenu() {
-  const isOpen = menu.classList.toggle('open');
-
-  menu.classList.toggle("menu--active");
-  burger.classList.toggle("burger--active");
-
-  if (isOpen) {
-    document.body.style.overflow = 'hidden';
-    burger.setAttribute('aria-label', 'Закрыть меню');
-  } else {
-    document.body.style.overflow ='';
-    burger.setAttribute('aria-label', 'Открыть меню');
+  if ( document.documentElement.clientWidth < 576 ) {
+    menu.classList.toggle("menu--active");
+    burger.classList.toggle("burger--active");
   }
 };
 
@@ -71,7 +60,6 @@ document.addEventListener('keydown', (e) => {
 });
 
 //Swiper-on-resize by maxdenaro
-
 window.addEventListener('DOMContentLoaded', () => {
 
   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
