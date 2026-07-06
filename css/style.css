@@ -468,7 +468,7 @@ body {
 }
 
 .sketchbook__image {
-  background-image: url('/image/sketchbook.png');
+  background-image: url('../image/sketchbook.png');
   background-repeat: no-repeat;
   background-size: cover;
 }

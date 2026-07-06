@@ -16,12 +16,17 @@
 
 ## 🖥️ Демо 
  
+**Сайт:** [Simple](https://alexeysokoloff71.github.io/Simple_bootstrap/) 
 **Макет (исходник):** [Ссылка на макет Figma](https://verstaem.online/projects/simple/)  
 
 ### Скриншоты
 | Десктоп версия | Мобильная версия |
 |:--------------:|:----------------:|
 | ![Скриншот десктопа](./image/simple_desktop.png) | ![Скриншот мобилки](./image/simple_mobile.png) |
+
+### Проиводительность
+
+![Отчёт о производительности](./image/lighthouse.png)
 
 ---
 
